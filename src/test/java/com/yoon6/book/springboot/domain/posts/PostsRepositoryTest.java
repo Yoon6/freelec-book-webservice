@@ -1,6 +1,5 @@
 package com.yoon6.book.springboot.domain.posts;
 
-import org.apache.tomcat.jni.Local;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
@@ -11,8 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -64,8 +61,8 @@ public class PostsRepositoryTest {
         // then
         Posts posts = postsList.get(0);
 
-        System.out.println(">>>>>>> createDate=" + posts.getCreateDate() + ", modifiedDate=" + posts.getModifiedDate());
-        Assertions.assertThat(posts.getCreateDate()).isAfter(now);
+        System.out.println(">>>>>>> createDate=" + posts.getCreatedDate() + ", modifiedDate=" + posts.getModifiedDate());
+        Assertions.assertThat(posts.getCreatedDate()).isAfter(now);
         Assertions.assertThat(posts.getModifiedDate()).isAfter(now);
     }
 }
