@@ -38,6 +38,8 @@ deploy:
     deployment_group: freelec-springboot2-webservice-group
     region: us-east-2
     wait-until-deployed: true
+    on:
+      all_branches: true
 
 before_install:
   - chmod +x gradlew
